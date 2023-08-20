@@ -40,10 +40,7 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapAdminRoutes();
         $this->mapAjaxRoutes();
-
         $this->mapCustomerRoutes();
-        $this->mapEmployerRoutes();
-        $this->mapEmployeeRoutes();
     }
 
     protected function mapAdminRoutes()
@@ -66,19 +63,5 @@ class RouteServiceProvider extends ServiceProvider
         Route::middleware('web')
             ->namespace($this->namespace)
             ->group(base_path('routes/customer.php'));
-    }
-
-    protected function mapEmployerRoutes()
-    {
-        Route::middleware('web')
-            ->namespace($this->namespace)
-            ->group(base_path('routes/employer.php'));
-    }
-
-    protected function mapEmployeeRoutes()
-    {
-        Route::middleware('web')
-            ->namespace($this->namespace)
-            ->group(base_path('routes/employee.php'));
     }
 }

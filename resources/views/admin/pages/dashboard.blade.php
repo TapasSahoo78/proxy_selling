@@ -1,287 +1,171 @@
 @extends('admin.layouts.app', ['showHeader' => true, 'showBody' => true, 'showSidebar' => true, 'showFooter' => true])
 
 @section('content')
-    <section class="employer-details">
-        <div class="row">
-            <h2 class="top-hdng mt-2">Welcome Admin</h2>
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+        {{-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> --}}
+    </div>
 
-            <div class="employers-count-box">
-                <div class="row">
+    <!-- Content Row -->
+    <div class="row">
 
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="emp-box-count">
-                            <h2>Employers</h2>
-                            <h1>200</h1>
-                            <a href="#" class="side-ad-plus"> <i class="fa-solid fa-plus"></i></a>
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                Earnings (Monthly)</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
                         </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="emp-box-count">
-                            <h2>Paid Employers</h2>
-                            <h1>155</h1>
-                            <a href="#" class="side-ad-plus"> <i class="fa-solid fa-plus"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="emp-box-count">
-                            <h2>Managers</h2>
-                            <h1>1345</h1>
-                            <a href="#" class="side-ad-plus"> <i class="fa-solid fa-plus"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 col-sm-12">
-                        <div class="emp-box-count">
-                            <h2>Employees</h2>
-                            <h1>5371</h1>
-                            <a href="#" class="side-ad-plus"> <i class="fa-solid fa-plus"></i></a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="admin-bottom-dashboard">
-                <div class="row">
-                    <div class="col-lg-5">
-                        <div class="admn-dash-left">
-
-                            <div class="hding-admn">
-                                <h3>Employers</h3>
-                                <a href="#">VIEW ALL</a>
-                            </div>
-
-                            <div class="mcdonal-admin-bx">
-                                <div class="mcdonal-ad-img">
-                                    <img src="../assets/images/mcc.png" alt="">
-                                    <h3>McDonalds</h3>
-                                </div>
-                                <h4>Australia</h4>
-                            </div>
-
-                            <div class="mcdonal-admin-bx">
-                                <div class="mcdonal-ad-img">
-                                    <img src="../assets/images/mcc.png" alt="">
-                                    <h3>McDonalds</h3>
-                                </div>
-                                <h4>Australia</h4>
-                            </div>
-
-                            <div class="mcdonal-admin-bx">
-                                <div class="mcdonal-ad-img">
-                                    <img src="../assets/images/mcc.png" alt="">
-                                    <h3>McDonalds</h3>
-                                </div>
-                                <h4>Australia</h4>
-                            </div>
-
-                            <div class="mcdonal-admin-bx">
-                                <div class="mcdonal-ad-img">
-                                    <img src="../assets/images/mcc.png" alt="">
-                                    <h3>McDonalds</h3>
-                                </div>
-                                <h4>Australia</h4>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-7">
-                        <div class="admin-revw">
-                            <h3>Reviews</h3>
-                            <div class="employees-box">
-
-                                <!-- Bordered Tabs Justified -->
-                                <ul class="nav nav-tabs nav-tabs-bordered d-flex" id="borderedTabJustified2" role="tablist">
-                                    <li class="nav-item flex-fill" role="presentation">
-                                        <button class="nav-link active" id="alltime-tab" data-bs-toggle="tab"
-                                            data-bs-target="#bordered-justified-alltime" type="button" role="tab"
-                                            aria-controls="alltime" aria-selected="false" tabindex="-1">ALL TIME </button>
-                                    </li>
-                                    <li class="nav-item flex-fill" role="presentation">
-                                        <button class="nav-link" id="last-tab" data-bs-toggle="tab"
-                                            data-bs-target="#bordered-justified-last" type="button" role="tab"
-                                            aria-controls="last" aria-selected="true">LAST
-                                            24 HOURS </button>
-                                    </li>
-                                    <li class="nav-item flex-fill" role="presentation">
-                                        <button class="nav-link" id="lastwk-tab" data-bs-toggle="tab"
-                                            data-bs-target="#bordered-justified-lastwk" type="button" role="tab"
-                                            aria-controls="lastwk" aria-selected="false" tabindex="-1">LAST WEEK</button>
-                                    </li>
-
-                                </ul>
-                                <div class="tab-content pt-2" id="borderedTabJustifiedContent">
-                                    <div class="tab-pane fade show active" id="bordered-justified-alltime" role="tabpanel"
-                                        aria-labelledby="alltime-tab">
-                                        <div class="admin-all-rvw" id="style-2">
-                                            <div class="rvw-usr">
-                                                <div class="rvw-bx">
-                                                    <div class="rvw-img">
-                                                        <img src="../assets/images/rvw1.png" alt="">
-                                                    </div>
-
-                                                    <div class="rvw-cntnt">
-                                                        <h6>Vanille</h6>
-                                                        <div class="rvw-cntnt-btm">
-                                                            <p>5.0 </p>
-                                                            <div class="str-5">
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-
-                                                            </div>
-                                                            <span>1 Month Ago</span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                                    sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua.</p>
-                                            </div>
-
-                                            <div class="rvw-usr">
-                                                <div class="rvw-bx">
-                                                    <div class="rvw-img">
-                                                        <img src="../assets/images/rvw2.png" alt="">
-                                                    </div>
-
-                                                    <div class="rvw-cntnt">
-                                                        <h6>Maduin</h6>
-                                                        <div class="rvw-cntnt-btm">
-                                                            <p>5.0 </p>
-                                                            <div class="str-5">
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-
-                                                            </div>
-                                                            <span>1 Month Ago</span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                                    sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua.</p>
-                                            </div>
-
-                                            <div class="rvw-usr">
-                                                <div class="rvw-bx">
-                                                    <div class="rvw-img">
-                                                        <img src="../assets/images/rvw2.png" alt="">
-                                                    </div>
-
-                                                    <div class="rvw-cntnt">
-                                                        <h6>Maduin</h6>
-                                                        <div class="rvw-cntnt-btm">
-                                                            <p>5.0 </p>
-                                                            <div class="str-5">
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-
-                                                            </div>
-                                                            <span>1 Month Ago</span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                                    sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="bordered-justified-last" role="tabpanel"
-                                        aria-labelledby="last-tab">
-                                        <div class="admin-all-rvw">
-                                            <div class="rvw-usr">
-                                                <div class="rvw-bx">
-                                                    <div class="rvw-img">
-                                                        <img src="../assets/images/rvw1.png" alt="">
-                                                    </div>
-
-                                                    <div class="rvw-cntnt">
-                                                        <h6>Vanille</h6>
-                                                        <div class="rvw-cntnt-btm">
-                                                            <p>5.0 </p>
-                                                            <div class="str-5">
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-
-                                                            </div>
-                                                            <span>1 Month Ago</span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                                    sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua.</p>
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                    <div class="tab-pane fade" id="bordered-justified-lastwk" role="tabpanel"
-                                        aria-labelledby="lastwk-tab">
-                                        <div class="admin-all-rvw">
-
-
-                                            <div class="rvw-usr">
-                                                <div class="rvw-bx">
-                                                    <div class="rvw-img">
-                                                        <img src="../assets/images/rvw2.png" alt="">
-                                                    </div>
-
-                                                    <div class="rvw-cntnt">
-                                                        <h6>Maduin</h6>
-                                                        <div class="rvw-cntnt-btm">
-                                                            <p>5.0 </p>
-                                                            <div class="str-5">
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-                                                                <i class="fa-solid fa-star"></i>
-
-                                                            </div>
-                                                            <span>1 Month Ago</span>
-                                                        </div>
-
-                                                    </div>
-                                                </div>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                                    sed do eiusmod tempor
-                                                    incididunt ut labore et dolore magna aliqua.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-                                <!-- End Bordered Tabs Justified -->
-
-                            </div>
+                        <div class="col-auto">
+                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
                         </div>
                     </div>
                 </div>
             </div>
-
-
         </div>
-    </section>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                Earnings (Annual)</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-info shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+                            </div>
+                            <div class="row no-gutters align-items-center">
+                                <div class="col-auto">
+                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                </div>
+                                <div class="col">
+                                    <div class="progress progress-sm mr-2">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 50%"
+                                            aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pending Requests Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                    <div class="row no-gutters align-items-center">
+                        <div class="col mr-2">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                Pending Requests</div>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                        </div>
+                        <div class="col-auto">
+                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+
+        <!-- Area Chart -->
+        <div class="col-xl-8 col-lg-7">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                            aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">Dropdown Header:</div>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-area">
+                        <canvas id="myAreaChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="col-xl-4 col-lg-5">
+            <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                    <div class="dropdown no-arrow">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                            aria-labelledby="dropdownMenuLink">
+                            <div class="dropdown-header">Dropdown Header:</div>
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                    <div class="chart-pie pt-4 pb-2">
+                        <canvas id="myPieChart"></canvas>
+                    </div>
+                    <div class="mt-4 text-center small">
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-primary"></i> Direct
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-success"></i> Social
+                        </span>
+                        <span class="mr-2">
+                            <i class="fas fa-circle text-info"></i> Referral
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 @endsection

@@ -18,7 +18,7 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.'], function () {
         Route::get('forgot-password' , 'showAdminForgotPasswordForm')->name('forgot.password');
     });
 
-    Route::group(['middleware' => 'CheckAdmin', 'preventBackHistory'], function () {
+    // Route::group(['middleware' => 'CheckAdmin', 'preventBackHistory'], function () {
 
         Route::controller(AuthController::class)->group(function () {
             Route::get('logout', 'logout')->name('logout');
@@ -38,5 +38,5 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.'], function () {
             Route::get('add-employee-manager', 'showEmpManager')->name('add.empmanager');
             Route::get('list-employee-manager', 'listEmpManager')->name('list.empmanager');
         });
-    });
+    // });
 });

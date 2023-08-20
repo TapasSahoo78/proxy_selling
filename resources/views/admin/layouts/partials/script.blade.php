@@ -1,17 +1,18 @@
-<script src="{{ asset('assets/libs/jquery/dist/jquery.min.js') }}"></script>
-<!-- Bootstrap tether Core JavaScript -->
-<script src="{{ asset('assets/libs/bootstrap/dist/js/bootstrap.bundle.js') }}"></script>
-<script src="{{ asset('assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js') }}"></script>
-<script src="{{ asset('assets/extra-libs/sparkline/sparkline.js') }}"></script>
-<!--Wave Effects -->
-<script src="{{ asset('dist/js/waves.js') }}"></script>
-<!--Menu sidebar -->
-<script src="{{ asset('dist/js/sidebarmenu.js') }}"></script>
-<!--Custom JavaScript -->
-<script src="{{ asset('dist/js/custom.min.js') }}"></script>
-<script src="{{ asset('font/font-awesome-v6.js') }}"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-<script src="{{ asset('dist/js/jquery-confirm.js') }}"></script>
-<script src="{{ asset('assets/custom/admin-common.js') }}"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
-@stack('scripts')
+    <!-- Custom scripts for all pages-->
+    <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
+
+    <!-- Page level plugins -->
+    <script src="{{ asset('vendor/chart.js/Chart.min.js') }}"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="{{ asset('js/demo/chart-area-demo.js') }}"></script>
+    <script src="{{ asset('js/demo/chart-pie-demo.js') }}"></script>
+
+    @stack('scripts')

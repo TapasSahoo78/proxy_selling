@@ -1,62 +1,75 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta name="robots" content="noindex,nofollow" />
-    <title>Servscore</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Admin - Dashboard</title>
 
     @include('admin.layouts.partials.style')
+
 </head>
 
-<body>
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
-    @include('admin.layouts.partials.preloader')
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
-    @if ($showBody)
-        <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
-            data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
-            <!-- ============================================================== -->
-            <!-- Topbar header - style you can find in pages.scss -->
-            <!-- ============================================================== -->
-            @if ($showHeader)
-                @include('admin.layouts.partials.header')
-            @endif
-            <!-- ============================================================== -->
-            <!-- End Topbar header -->
-            <!-- ============================================================== -->
-            <!-- ============================================================== -->
-            <!-- Left Sidebar - style you can find in sidebar.scss  -->
-            <!-- ============================================================== -->
+@yield('auth')
+@if ($showBody)
+
+    <body id="page-top">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <!-- Sidebar -->
             @if ($showSidebar)
                 @include('admin.layouts.partials.sidebar')
             @endif
-            <div class="page-wrapper">
+            <!-- End of Sidebar -->
 
-                <div class="page-wrapper-inner">
+            <!-- Content Wrapper -->
+            <div id="content-wrapper" class="d-flex flex-column">
 
-                    @yield('content')
+                <!-- Main Content -->
+                <div id="content">
 
-                    @if ($showFooter)
-                        @include('admin.layouts.partials.footer')
+                    <!-- Topbar -->
+                    @if ($showHeader)
+                        @include('admin.layouts.partials.header')
                     @endif
+                    <!-- End of Topbar -->
+
+                    <!-- Begin Page Content -->
+                    <div class="container-fluid">
+                        @yield('content')
+                    </div>
+                    <!-- /.container-fluid -->
                 </div>
+                <!-- End of Main Content -->
+
+                <!-- Footer -->
+                @if ($showFooter)
+                    @include('admin.layouts.partials.footer')
+                @endif
+                <!-- End of Footer -->
 
             </div>
-        </div>
-    @else
-        @yield('main')
-    @endif
-    @include('admin.layouts.partials.script')
+            <!-- End of Content Wrapper -->
 
-</body>
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        @include('admin.layouts.partials.preloader')
+
+        <!-- Logout Modal-->
+        @include('admin.layouts.partials.logout')
+
+        @include('admin.layouts.partials.script')
+
+    </body>
+@endif
 
 </html>

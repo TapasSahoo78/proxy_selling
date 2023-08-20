@@ -1,79 +1,71 @@
 @extends('admin.layouts.app', ['showHeader' => false, 'showBody' => false, 'showSidebar' => false, 'showFooter' => false])
 
-@section('main')
-    <section class="login-sec">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-5  col-sm-12 login-sec-left">
-                    <div class="container">
-                        <div class="lgo">
-                            <img src="../assets/images/logo.png" alt="">
-                        </div>
+@section('auth')
+    <body class="bg-gradient-primary">
 
-                        <div class="login-box">
-                            <h2>Admin Login</h2>
-                            <p class="top-p">Please enter your login details</p>
+        <div class="container">
 
-                            <form role="form" method="post" data-action="{{ route('admin.login.post') }}"
-                                id="adminFrm">
-                                @csrf
-                                <div class="input-bx">
-                                    <label for="exampleInputEmail1" class="form-label">Email </label>
-                                    <input type="email" name="email" class="form-control" id="exampleInputEmail1"
-                                        aria-describedby="emailHelp">
-                                    <i class="fa-regular fa-circle-user"></i>
+            <!-- Outer Row -->
+            <div class="row justify-content-center">
+
+                <div class="col-xl-10 col-lg-12 col-md-9">
+
+                    <div class="card o-hidden border-0 shadow-lg my-5">
+                        <div class="card-body p-0">
+                            <!-- Nested Row within Card Body -->
+                            <div class="row">
+                                <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                                <div class="col-lg-6">
+                                    <div class="p-5">
+                                        <div class="text-center">
+                                            <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        </div>
+                                        <form class="user">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control form-control-user"
+                                                    id="exampleInputEmail" aria-describedby="emailHelp"
+                                                    placeholder="Enter Email Address...">
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" class="form-control form-control-user"
+                                                    id="exampleInputPassword" placeholder="Password">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="custom-control custom-checkbox small">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck">
+                                                    <label class="custom-control-label" for="customCheck">Remember
+                                                        Me</label>
+                                                </div>
+                                            </div>
+                                            <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                                Login
+                                            </a>
+                                            <hr>
+                                            <a href="index.html" class="btn btn-google btn-user btn-block">
+                                                <i class="fab fa-google fa-fw"></i> Login with Google
+                                            </a>
+                                            <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                                <i class="fab fa-facebook-f fa-fw"></i> Login with Facebook
+                                            </a>
+                                        </form>
+                                        <hr>
+                                        <div class="text-center">
+                                            <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                        </div>
+                                        <div class="text-center">
+                                            <a class="small" href="register.html">Create an Account!</a>
+                                        </div>
+                                    </div>
                                 </div>
-
-                                <div class="input-bx">
-                                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control p-2"
-                                        id="exampleInputPassword1">
-                                    <span style="padding:0 2px;">
-                                        <i id="eyeChangeId" class="fa fa-eye" onclick="eyeEnableOrDisable()"
-                                            style="left: 265px;"></i>
-                                    </span>
-                                </div>
-
-                                <div class="remebrMe">
-                                    <p><input type="checkbox" name="remember_me"> Remember Me</p>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary">Login</button>
-                            </form>
-
-                            <div class="remebr">
-                                <p></p>
-                                <a href="{{ route('admin.forgot.password') }}">Forgot password?</a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-7 col-sm-12 login-sec-right"
-                    style="background-image: url('../assets/images/admn-bgg.png');">
-                    <div class="txt-bx">
-                        <h4>Welcome Back! ServScore is the # 1 Partner in managing Staff Performance and Customer
-                            Experiences in the service industry</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-@endsection
-@push('scripts')
-    <script type="text/javascript">
-        function eyeEnableOrDisable() {
-            var x = document.getElementById('exampleInputPassword1');
-            var y = document.getElementById('eyeChangeId');
 
-            if (x.type === "password") {
-                x.type = "text";
-                y.classList.remove('fa-eye');
-                y.classList.add('fa-eye-slash');
-            } else {
-                x.type = "password";
-                y.classList.remove('fa-eye-slash');
-                y.classList.add('fa-eye');
-            }
-        }
-    </script>
-@endpush
+                </div>
+
+            </div>
+
+        </div>
+
+    </body>
+@endsection
