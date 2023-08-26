@@ -15,7 +15,17 @@
 
 </head>
 
-@yield('auth')
+@if ($showAuth)
+    @yield('auth')
+    <!-- Scroll to Top Button-->
+    @include('admin.layouts.partials.preloader')
+
+    <!-- Logout Modal-->
+    @include('admin.layouts.partials.logout')
+
+    @include('admin.layouts.partials.script')
+@endif
+
 @if ($showBody)
 
     <body id="page-top">

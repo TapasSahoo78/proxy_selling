@@ -15,4 +15,10 @@
     <script src="{{ asset('js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('js/demo/chart-pie-demo.js') }}"></script>
 
+    <script src="{{ asset('dist/js/jquery-confirm.js') }}"></script>
+    <script src="{{ asset('dist/js/admin-common.js') }}"></script>
+    <script src="{{ asset('dist/js/jquery.dataTables.min.js') }}"></script>
+
+    <script src="https://cdn.ckeditor.com/4.14.0/standard/ckeditor.js"></script>
+
     @stack('scripts')

@@ -28,26 +28,37 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="{{ route('admin.category.list') }}">
             <i class="fas fa-fw fa-cog"></i>
             <span>Category Management</span>
         </a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#">
             <i class="fas fa-fw fa-cog"></i>
             <span>Coupon Management</span>
         </a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#">
             <i class="fas fa-fw fa-cog"></i>
             <span>CMS Management</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Ticket Management</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Notification Management</span>
         </a>
     </li>
 
@@ -66,21 +77,6 @@
         </div>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Ticket Management</span>
-        </a>
-    </li>
-
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Notification Management</span>
-        </a>
-    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">

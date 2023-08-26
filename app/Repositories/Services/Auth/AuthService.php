@@ -14,7 +14,6 @@ class AuthService implements AuthContract
     }
     public function login(array $request, $model, $guard)
     {
-        // dd($model);
         $userCredentials = array(
 
             'email' => $request['email'],
@@ -29,7 +28,7 @@ class AuthService implements AuthContract
             $user = $model::where('email', $request['email'])->first();
         }
 
-        $remember = $request['remember_me'] ? true : false;
+        $remember = isset($request['remember_me']) ? true : false;
 
         $login = Auth::guard($guard)->attempt($userCredentials, $remember);
 

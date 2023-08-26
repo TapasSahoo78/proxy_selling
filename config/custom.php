@@ -28,7 +28,7 @@ return [
     'MSG_FILE_DELETE_FAIL'          => 'Error deleting file.',
     'MSG_REQUIRED'                  => 'Please fill up the required fields',
     'MSG_DUPLICATE'                 => 'Record already exists',
-    'MSG_ERROR_TRY_AGAIN'           => 'Error! Please try again.',
+    'MSG_ERROR_TRY_AGAIN'           => 'Something went wrong!',
 
     'MSG_CHILD_RECORD_EXISTS'       => 'Error! Child Record Exists.',
 

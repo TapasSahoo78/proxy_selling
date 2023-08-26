@@ -1,4 +1,4 @@
-@extends('admin.layouts.app', ['showHeader' => true, 'showBody' => true, 'showSidebar' => true, 'showFooter' => true])
+@extends('admin.layouts.app', ['showHeader' => true, 'showAuth' => false, 'showBody' => true, 'showSidebar' => true, 'showFooter' => true])
 
 @section('content')
     <!-- Page Heading -->
