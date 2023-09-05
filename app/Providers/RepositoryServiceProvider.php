@@ -5,11 +5,21 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Repositories\Contracts\Auth\AuthContract;
 use App\Repositories\Contracts\Admin\{
-    EmployerContract
+    CategoryContract,
+    CmsContract,
+    CouponContract,
+    NotificationContract,
+    TicketContract,
+    UserContract
 };
 use App\Repositories\Services\Auth\AuthService;
 use App\Repositories\Services\Admin\{
-    EmployerService
+    CategoryService,
+    CmsService,
+    CouponService,
+    NotificationService,
+    TicketService,
+    UserService
 };
 
 
@@ -17,7 +27,12 @@ class RepositoryServiceProvider extends ServiceProvider
 {
     protected $repositories = [
         AuthContract::class => AuthService::class,
-        EmployerContract::class  => EmployerService::class
+        CategoryContract::class  => CategoryService::class,
+        CouponContract::class => CouponService::class,
+        CmsContract::class  => CmsService::class,
+        TicketContract::class  => TicketService::class,
+        NotificationContract::class  => NotificationService::class,
+        UserContract::class  => UserService::class
     ];
     /**
      * Register services.
