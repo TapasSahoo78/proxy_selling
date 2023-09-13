@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{ route('admin.dashboard') }}">
         <div class="sidebar-brand-icon rotate-n-15">
             <i class="fas fa-laugh-wink"></i>
         </div>
@@ -13,7 +13,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{ route('admin.dashboard') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span></a>
     </li>
@@ -34,29 +34,37 @@
         </a>
     </li>
 
+    <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="{{ route('admin.proxy.list') }}">
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Proxy Management</span>
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{ route('admin.coupon.list') }}">
             <i class="fas fa-fw fa-cog"></i>
             <span>Coupon Management</span>
         </a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="{{ route('admin.cms.list') }}">
             <i class="fas fa-fw fa-cog"></i>
             <span>CMS Management</span>
         </a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="{{ route('admin.ticket.list') }}">
             <i class="fas fa-fw fa-cog"></i>
             <span>Ticket Management</span>
         </a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link collapsed" href="{{ route('admin.notification.list') }}">
             <i class="fas fa-fw fa-cog"></i>
             <span>Notification Management</span>
         </a>
@@ -71,8 +79,8 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Utilities:</h6>
-                <a class="collapse-item" href="utilities-color.html">User List</a>
-                <a class="collapse-item" href="utilities-border.html">Payment History</a>
+                <a class="collapse-item" href="{{ route('admin.user.list') }}">User List</a>
+                <a class="collapse-item" href="{{ route('admin.user.list') }}">Payment History</a>
             </div>
         </div>
     </li>

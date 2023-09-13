@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('admins', function (Blueprint $table) {
-            $table->increments('id');
+            $table->id();
             $table->uuid('uuid')->unique();
             $table->string('name');
             $table->string('email')->unique();
@@ -21,6 +21,7 @@ return new class extends Migration
             $table->boolean('is_super')->default(false);
             $table->boolean('is_active')->default(true);
             $table->rememberToken();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

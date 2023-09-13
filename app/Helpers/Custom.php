@@ -65,3 +65,17 @@ if (!function_exists('checkFileDirectory')) {
         endif;
     }
 }
+
+if (!function_exists('generateCouponCode')) {
+    function generateCouponCode($length = 8)
+    {
+        $characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        $couponCode = '';
+
+        for ($i = 0; $i < $length; $i++) {
+            $couponCode .= $characters[rand(0, strlen($characters) - 1)];
+        }
+
+        return $couponCode;
+    }
+}

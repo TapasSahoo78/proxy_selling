@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\{
     CmsController,
     CouponController,
     NotificationController,
+    PaymentTypeController,
+    ProxyController,
     TicketController,
     UserController
 };
@@ -30,12 +32,29 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.'], function () {
             return view('admin.pages.dashboard');
         })->name('dashboard');
 
+        Route::controller(PaymentTypeController::class)->group(function () {
+            Route::group(['prefix' => 'paytype', 'as' => 'paytype.'], function () {
+                Route::match(['get', 'post'], 'add', 'storePayType')->name('store');
+                Route::get('list', 'listPayType')->name('list');
+                Route::match(['GET', 'POST'], '/edit/{id}', 'editPayType')->name('edit');
+            });
+        });
+
         Route::controller(CategoryController::class)->group(function () {
             Route::group(['prefix' => 'category', 'as' => 'category.'], function () {
                 Route::match(['get', 'post'], 'add', 'storeCategory')->name('store');
                 Route::get('list', 'listCategory')->name('list');
                 Route::match(['GET', 'POST'], '/edit/{id}', 'editCategory')->name('edit');
                 Route::get('/delete/{id}',  'deleteCategory')->name('delete');
+            });
+        });
+
+        Route::controller(ProxyController::class)->group(function () {
+            Route::group(['prefix' => 'proxy', 'as' => 'proxy.'], function () {
+                Route::match(['get', 'post'], 'add', 'storeProxy')->name('store');
+                Route::get('list', 'listProxy')->name('list');
+                Route::match(['GET', 'POST'], '/edit/{id}', 'editProxy')->name('edit');
+                Route::get('/delete/{id}',  'deleteProxy')->name('delete');
             });
         });
 

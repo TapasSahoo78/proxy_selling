@@ -4,9 +4,9 @@
     <!-- Page Heading -->
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Coupon</h1>
-            <a href="{{ route('admin.coupon.list') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-list fa-sm text-white-50"></i> Coupon List</a>
+            <h1 class="h3 mb-0 text-gray-800">Proxy</h1>
+            <a href="{{ route('admin.proxy.list') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-list fa-sm text-white-50"></i> Proxy List</a>
         </div>
     </div>
     <div class="container-fluid">
@@ -20,23 +20,21 @@
                                 method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="text" name="code" class="form-control form-control-user"
-                                        id="exampleInputEmail" value="{{ $couponCode }}"
-                                        placeholder="Enter Category Code">
+                                    <lebel>Proxy Category : <sup class="text-danger">*</sup></lebel>
+                                    <select name="category" id="" class="form-control">
+                                        {{ getCategory('') }}
+                                    </select>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="discount"
-                                        class="form-control form-control-user float-number" id="exampleInputEmail"
-                                        placeholder="Enter Discount">
+                                    <lebel>Proxy Address : <sup class="text-danger">*</sup></lebel>
+                                    <input type="text" name="proxy" class="form-control form-control-user"
+                                        id="exampleInputEmail" value="" placeholder="Enter proxy address">
                                 </div>
                                 <div class="form-group">
-                                    <input type="date" name="expires_at" class="form-control form-control-user"
-                                        min="{{ date('Y-m-d') }}" id="exampleInputEmail" placeholder="Enter Expire day">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="usage_limit"
-                                        class="form-control form-control-user float-number" id="exampleInputEmail"
-                                        placeholder="Enter Usage Limit">
+                                    <lebel>Expiry date <sup class="text-danger">*</sup></lebel>
+                                    <input type="date" name="discount"
+                                        class="form-control form-control-user float-number" min="{{ date('Y-m-d') }}"
+                                        id="exampleInputEmail" placeholder="Enter Discount">
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button>
                             </form>

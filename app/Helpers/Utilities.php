@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Category;
+
 if (!function_exists('getCountry')) {
     function getCountry($country_id)
     {
@@ -52,6 +54,22 @@ if (!function_exists('getPlan')) {
                 echo "<option value='" . $key . "' selected>" . $value . "</option>";
             } else {
                 echo "<option value='" . $key . "'>" . $value . "</option>";
+            }
+        }
+    }
+}
+
+if (!function_exists('getCategory')) {
+    function getCategory($category_id)
+    {
+        $data = Category::all();
+        echo "<option value='' selected>Select Category</option>";
+
+        foreach ($data as $key => $value) {
+            if ($category_id == $value->id) {
+                echo "<option value='" . $value->id . "' selected>" . $value->name . "</option>";
+            } else {
+                echo "<option value='" . $value->id . "'>" . $value->name . "</option>";
             }
         }
     }

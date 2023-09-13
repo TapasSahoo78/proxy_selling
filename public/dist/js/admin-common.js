@@ -83,9 +83,6 @@ $(document).on('submit', '#employerexportdata', function () {
 });
 
 
-
-
-
 $(document).on('click', '.change-status', function () {
     var id = $(this).data('id');
     var keyId = $(this).data('key');

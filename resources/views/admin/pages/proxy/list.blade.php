@@ -4,9 +4,9 @@
     <!-- Page Heading -->
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-3">
-            <h1 class="h3 mb-0 text-gray-800">Coupon</h1>
-            <a href="{{ route('admin.coupon.store') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-save fa-sm text-white-50"></i> New Coupon</a>
+            <h1 class="h3 mb-0 text-gray-800">Proxy</h1>
+            <a href="{{ route('admin.proxy.store') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-save fa-sm text-white-50"></i> New Proxy</a>
         </div>
     </div>
     <!-- Content Row -->
@@ -18,7 +18,7 @@
             <div class="card shadow mb-4">
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="coupons-table" width="100%" cellspacing="0">
+                        <table class="table table-bordered" id="proxy-table" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>SL No</th>
@@ -63,7 +63,7 @@
 @push('scripts')
     <script>
         $(function() {
-            $('#coupons-table').DataTable({
+            $('#proxy-table').DataTable({
                 pageLength: 10,
                 lengthMenu: [10, 25, 50, 100],
             });

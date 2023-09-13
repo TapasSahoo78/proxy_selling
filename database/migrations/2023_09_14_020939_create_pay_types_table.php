@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('categories', function (Blueprint $table) {
+        Schema::create('pay_types', function (Blueprint $table) {
             $table->id();
-            $table->string('name')->unique();
-            $table->longText('description');
+            $table->string('name_type');
+            $table->string('qr_code')->nullable();
             $table->boolean('is_active')->default(true);
             $table->softDeletes();
             $table->timestamps();
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('categories');
+        Schema::dropIfExists('pay_types');
     }
 };

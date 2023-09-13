@@ -3,7 +3,7 @@
 namespace App\Repositories\Services\Admin;
 
 use App\Repositories\Contracts\Admin\TicketContract;
-use App\Models\Category as SELF_MODEL;
+use App\Models\Ticket as SELF_MODEL;
 
 class TicketService implements TicketContract
 {

@@ -1,17 +1,7 @@
 @extends('admin.layouts.app', ['showHeader' => true, 'showAuth' => false, 'showBody' => true, 'showSidebar' => true, 'showFooter' => true])
 
 @section('content')
-    <!-- Page Heading -->
-    <div class="container-fluid">
-        <div class="d-sm-flex align-items-center justify-content-between mb-3">
-            <h1 class="h3 mb-0 text-gray-800">Category</h1>
-            <a href="{{ route('admin.category.store') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-save fa-sm text-white-50"></i> New Category</a>
-        </div>
-    </div>
-    <!-- Content Row -->
     <div class="row">
-
         <!-- Begin Page Content -->
         <div class="container-fluid">
             <!-- DataTales Example -->
@@ -22,8 +12,9 @@
                             <thead>
                                 <tr>
                                     <th>SL No</th>
-                                    <th>Name</th>
+                                    <th>title</th>
                                     <th>Description</th>
+                                    <th>User</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -32,13 +23,22 @@
                                 @foreach ($data as $key => $value)
                                     <tr>
                                         <td>{{ ++$key }}</td>
-                                        <td>{{ $value->name }}</td>
-                                        <td>{!! $value->description !!}</td>
+                                        <td>{{ $value->title }}</td>
+                                        <td>{{ $value->description }}</td>
+                                        <td>{{ $value?->user?->name }}</td>
                                         <td>
-                                            <button class="btn btn-success change-status">Active</button>
+                                            <select name="" class="form-control" id="statusChange"
+                                                {{ $value->status == 'closed' ? 'disabled' : '' }}>
+                                                <option value="open"{{ $value->status == 'open' ? 'selected' : '' }}>Open
+                                                </option>
+                                                <option value="pending"{{ $value->status == 'pending' ? 'selected' : '' }}>
+                                                    Pending</option>
+                                                <option value="closed"{{ $value->status == 'closed' ? 'selected' : '' }}>
+                                                    Closed
+                                                </option>
+                                            </select>
                                         </td>
                                         <td>
-                                            <button class="btn btn-primary">Edit</button>
                                             <button class="btn btn-danger">Delete</button>
                                         </td>
                                     </tr>

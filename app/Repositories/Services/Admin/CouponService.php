@@ -15,6 +15,13 @@ class CouponService implements CouponContract
 
     public function storeCoupon($data)
     {
+        $data = [
+            'code' => $data['code'],
+            'discount' => $data['discount'],
+            'expires_at' => $data['expires_at'],
+            'usage_limit' => $data['usage_limit'],
+            'used_count' => 0
+        ];
         return SELF_MODEL::insert($data);
     }
 

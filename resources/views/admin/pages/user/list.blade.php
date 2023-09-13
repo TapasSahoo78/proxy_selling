@@ -4,9 +4,9 @@
     <!-- Page Heading -->
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-3">
-            <h1 class="h3 mb-0 text-gray-800">Category</h1>
-            <a href="{{ route('admin.category.store') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-save fa-sm text-white-50"></i> New Category</a>
+            <h1 class="h3 mb-0 text-gray-800">User</h1>
+            <a href="{{ route('admin.user.store') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-save fa-sm text-white-50"></i> New User</a>
         </div>
     </div>
     <!-- Content Row -->
@@ -23,13 +23,14 @@
                                 <tr>
                                     <th>SL No</th>
                                     <th>Name</th>
-                                    <th>Description</th>
+                                    <th>Email</th>
+                                    <th>Country</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($data as $key => $value)
+                                {{-- @foreach ($data as $key => $value)
                                     <tr>
                                         <td>{{ ++$key }}</td>
                                         <td>{{ $value->name }}</td>
@@ -42,7 +43,7 @@
                                             <button class="btn btn-danger">Delete</button>
                                         </td>
                                     </tr>
-                                @endforeach
+                                @endforeach --}}
                             </tbody>
                         </table>
                     </div>
