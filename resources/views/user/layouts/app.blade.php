@@ -1,85 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 
 <head>
-
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Proxy Raja</title>
+    <link rel="icon" href="images/icon.png')}}" type="image/gif" sizes="24x24">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Uhost is Creative Website Template" name="description">
+    <meta content="" name="keywords">
+    <meta content="" name="author">
 
-    <title>Admin - Dashboard</title>
-
-    @include('admin.layouts.partials.style')
-
+    <!-- CSS Files
+    ================================================== -->
+    @include('user.layouts.partials.style')
 </head>
 
-@if ($showAuth)
-    @yield('auth')
-    <!-- Scroll to Top Button-->
-    @include('admin.layouts.partials.preloader')
+<body>
+    <div id="wrapper">
 
-    <!-- Logout Modal-->
-    @include('admin.layouts.partials.logout')
 
-    @include('admin.layouts.partials.script')
-@endif
+        <!-- header begin -->
+        @include('user.layouts.partials.header')
+        <!-- header close -->
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
 
-@if ($showBody)
-
-    <body id="page-top">
-
-        <!-- Page Wrapper -->
-        <div id="wrapper">
-
-            <!-- Sidebar -->
-            @if ($showSidebar)
-                @include('admin.layouts.partials.sidebar')
-            @endif
-            <!-- End of Sidebar -->
-
-            <!-- Content Wrapper -->
-            <div id="content-wrapper" class="d-flex flex-column">
-
-                <!-- Main Content -->
-                <div id="content">
-
-                    <!-- Topbar -->
-                    @if ($showHeader)
-                        @include('admin.layouts.partials.header')
-                    @endif
-                    <!-- End of Topbar -->
-
-                    <!-- Begin Page Content -->
-                    <div class="container-fluid">
-                        @yield('content')
-                    </div>
-                    <!-- /.container-fluid -->
-                </div>
-                <!-- End of Main Content -->
-
-                <!-- Footer -->
-                @if ($showFooter)
-                    @include('admin.layouts.partials.footer')
-                @endif
-                <!-- End of Footer -->
-
-            </div>
-            <!-- End of Content Wrapper -->
+            @yield('content')
 
         </div>
-        <!-- End of Page Wrapper -->
+        <!-- content close -->
 
-        <!-- Scroll to Top Button-->
-        @include('admin.layouts.partials.preloader')
+        <!-- footer begin -->
+        @include('user.layouts.partials.footer')
+        <!-- footer close -->
 
-        <!-- Logout Modal-->
-        @include('admin.layouts.partials.logout')
+        @include('user.layouts.partials.preloader')
+    </div>
 
-        @include('admin.layouts.partials.script')
 
-    </body>
-@endif
+    <!-- Javascript Files
+    ================================================== -->
+    @include('user.layouts.partials.script')
+</body>
 
 </html>
