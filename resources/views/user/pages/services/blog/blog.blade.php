@@ -44,7 +44,7 @@
                                 </div>
                             </div>
                             <div class="post-text">
-                                <h3><a href="news-single.html">Better User Interface</a></h3>
+                                <h3><a href="{{route('news_single')}}">Better User Interface</a></h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua.</p>
                             </div>
@@ -67,7 +67,7 @@
                                 </div>
                             </div>
                             <div class="post-text">
-                                <h3><a href="news-single.html">Experts Web Design Tips</a></h3>
+                                <h3><a href="{{route('news_single')}}">Experts Web Design Tips</a></h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua.</p>
                             </div>
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                             <div class="post-text">
-                                <h3><a href="news-single.html">Importance Of Web Design</a></h3>
+                                <h3><a href="{{route('news_single')}}">Importance Of Web Design</a></h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua.</p>
                             </div>
@@ -113,7 +113,7 @@
                                 </div>
                             </div>
                             <div class="post-text">
-                                <h3><a href="news-single.html">Avoid These Erros In UI Design</a></h3>
+                                <h3><a href="{{route('news_single')}}">Avoid These Erros In UI Design</a></h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua.</p>
                             </div>
@@ -136,7 +136,7 @@
                                 </div>
                             </div>
                             <div class="post-text">
-                                <h3><a href="news-single.html">Make Mobile Website Faster</a></h3>
+                                <h3><a href="{{route('news_single')}}">Make Mobile Website Faster</a></h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua.</p>
                             </div>
@@ -159,7 +159,7 @@
                                 </div>
                             </div>
                             <div class="post-text">
-                                <h3><a href="news-single.html">How Sell Digital Product</a></h3>
+                                <h3><a href="{{route('news_single')}}">How Sell Digital Product</a></h3>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                                     incididunt ut labore et dolore magna aliqua.</p>
                             </div>

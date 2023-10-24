@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Proxy;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -10,7 +10,7 @@ class ProxyController extends Controller
     public function listProxy()
     {
         $data = [];
-        return view('admin.pages.proxy.list',compact('data'));
+        return view('admin.pages.proxy.list', compact('data'));
     }
     public function storeProxy()
     {

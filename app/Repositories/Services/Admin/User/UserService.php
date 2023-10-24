@@ -1,36 +1,37 @@
 <?php
 
-namespace App\Repositories\Services\Admin;
+namespace App\Repositories\Services\Admin\User;
 
 use App\Repositories\Contracts\Admin\CategoryContract;
 use App\Models\Category as SELF_MODEL;
+use App\Repositories\Contracts\Admin\User\UserContract;
 
-class CategoryService implements CategoryContract
+class UserService implements UserContract
 {
 
-    public function allCategories()
+    public function allUsers()
     {
         return SELF_MODEL::latest()->paginate(10);
     }
 
-    public function storeCategory($data)
+    public function storeUser($data)
     {
         return SELF_MODEL::insert($data);
     }
 
-    public function findCategory($id)
+    public function findUser($id)
     {
         return SELF_MODEL::find($id);
     }
 
-    public function updateCategory($data, $id)
+    public function updateUser($data, $id)
     {
         $clients = SELF_MODEL::where('id', $id)->first();
         $clients->name = $data['name'];
         $clients->save();
     }
 
-    public function destroyCategory($id)
+    public function destroyUser($id)
     {
         $clients = SELF_MODEL::find($id);
         $clients->delete();

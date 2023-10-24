@@ -1,7 +1,6 @@
 @extends('admin.layouts.app', ['showHeader' => false, 'showAuth' => true, 'showBody' => false, 'showSidebar' => false, 'showFooter' => false])
-
+@section('title', 'User Sign In')
 @section('auth')
-
     <body class="bg-gradient-primary">
 
         <div class="container">
@@ -21,7 +20,7 @@
                                         <div class="text-center">
                                             <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                         </div>
-                                        <form role="form" method="post" data-action="{{ route('admin.login.post') }}"
+                                        <form role="form" method="post" data-action="{{ route('user.login.post') }}"
                                             id="adminFrm">
                                             @csrf
                                             <div class="form-group">
@@ -42,8 +41,11 @@
                                                 </div>
                                             </div>
                                             <button type="submit" class="btn btn-primary btn-user btn-block">Login</button>
-
                                         </form>
+                                        <p class="m-3">
+                                            <a href="#">Register Now</a>
+                                            <a href="#" class="text-danger m-4">Forget Password</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>

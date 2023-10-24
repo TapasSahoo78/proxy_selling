@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin - Dashboard</title>
+    <title>@yield('title')</title>
 
     @include('admin.layouts.partials.style')
 

@@ -26,34 +26,82 @@
         Interface
     </div>
 
-    <!-- Nav Item - Pages Collapse Menu -->
+    {{-- New Sidebar Menu Management Start --}}
     <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('admin.category.list') }}">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Category Management</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBlog"
+            aria-expanded="true" aria-controls="collapseBlog">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Blog Management</span>
         </a>
+        <div id="collapseBlog" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Utilities:</h6>
+                <a class="collapse-item" href="{{ route('admin.blog.category.list') }}">Categories</a>
+                <a class="collapse-item" href="{{ route('admin.user.list') }}">Blogs</a>
+            </div>
+        </div>
     </li>
 
-    <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('admin.proxy.list') }}">
-            <i class="fas fa-fw fa-cog"></i>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseProxy"
+            aria-expanded="true" aria-controls="collapseProxy">
+            <i class="fas fa-fw fa-wrench"></i>
             <span>Proxy Management</span>
         </a>
+        <div id="collapseProxy" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Utilities:</h6>
+                <a class="collapse-item" href="{{ route('admin.coupon.list') }}">Coupons</a>
+                <a class="collapse-item" href="#">Countries</a>
+                <a class="collapse-item" href="{{ route('admin.category.list') }}">Categories</a>
+                <a class="collapse-item" href="{{ route('admin.proxy.list') }}">Proxies</a>
+            </div>
+        </div>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('admin.coupon.list') }}">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Coupon Management</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUser"
+            aria-expanded="true" aria-controls="collapseUser">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>User Management</span>
         </a>
+        <div id="collapseUser" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Utilities:</h6>
+                <a class="collapse-item" href="{{ route('admin.user.list') }}">User List</a>
+                <a class="collapse-item" href="{{ route('admin.user.list') }}">Payment History</a>
+            </div>
+        </div>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="{{ route('admin.cms.list') }}">
-            <i class="fas fa-fw fa-cog"></i>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseOrder"
+            aria-expanded="true" aria-controls="collapseOrder">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Order Management</span>
+        </a>
+        <div id="collapseOrder" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Utilities:</h6>
+                <a class="collapse-item" href="{{ route('admin.user.list') }}">User List</a>
+                <a class="collapse-item" href="{{ route('admin.user.list') }}">Payment History</a>
+            </div>
+        </div>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCMS"
+            aria-expanded="true" aria-controls="collapseCMS">
+            <i class="fas fa-fw fa-wrench"></i>
             <span>CMS Management</span>
         </a>
+        <div id="collapseCMS" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <h6 class="collapse-header">Utilities:</h6>
+                <a class="collapse-item" href="{{ route('admin.user.list') }}">User List</a>
+                <a class="collapse-item" href="{{ route('admin.user.list') }}">Payment History</a>
+            </div>
+        </div>
     </li>
 
     <li class="nav-item">
@@ -70,21 +118,7 @@
         </a>
     </li>
 
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-            aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>User Management</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Utilities:</h6>
-                <a class="collapse-item" href="{{ route('admin.user.list') }}">User List</a>
-                <a class="collapse-item" href="{{ route('admin.user.list') }}">Payment History</a>
-            </div>
-        </div>
-    </li>
-
+    {{-- New Sidebar Menu Management End --}}
 
     <!-- Divider -->
     <hr class="sidebar-divider">

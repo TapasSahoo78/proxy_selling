@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\View\View;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,8 +31,12 @@ Route::get('/proxies', function () {
 })->name('proxies');
 
 Route::get('/blog', function () {
-    return view('user.pages.services.blog');
+    return view('user.pages.services.blog.blog');
 })->name('blog');
+
+Route::get('/news-single', function () {
+    return View('user.pages.services.blog.news_single');
+})->name('news_single');
 
 Route::get('/faq', function () {
     return view('user.pages.include.faq');

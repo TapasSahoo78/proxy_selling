@@ -1,37 +1,28 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\Proxy;
 
 use App\Http\Controllers\BaseController;
-use App\Http\Controllers\Controller;
-use App\Repositories\Contracts\Admin\CouponContract;
+use App\Repositories\Contracts\Admin\Proxy\CategoryContract;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
-class CouponController extends BaseController
+class CategoryController extends BaseController
 {
-    private $CouponContract;
+    private $CategoryContract;
 
-    public function __construct(CouponContract $CouponContract)
+    public function __construct(CategoryContract $CategoryContract)
     {
-        $this->CouponContract = $CouponContract;
+        $this->CategoryContract = $CategoryContract;
     }
     protected $rules = [
-        'code' => 'required|unique:coupons',
-        'discount' => 'required|numeric',
-        'expires_at' => 'nullable|date',
-        'usage_limit' => 'integer|min:1',
-        'used_count' => 'integer|min:0',
+        'name' => 'required|unique:categories|string|min:3|max:100',
+        'description' => 'required|string|min:10|max:255',
     ];
 
-    public function listCoupon()
-    {
-        $data = $this->CouponContract->allCoupons();
-        return view('admin.pages.coupon.list', compact('data'));
-    }
-    public function storeCoupon(Request $request)
+    public function storeCategory(Request $request)
     {
         if ($request->isMethod('post')) {
 
@@ -44,11 +35,11 @@ class CouponController extends BaseController
             try {
                 $insert_array  = $request->except(['_token', '_method', 'id']);
 
-                $result = $this->CouponContract->storeCoupon($insert_array);
+                $result = $this->CategoryContract->storeCategory($insert_array);
 
                 DB::commit();
                 if (isset($result) && !empty($result)) {
-                    return $this->responseJson(true, 200, 'Coupon added Successfully', '', route('admin.coupon.list'));
+                    return $this->responseJson(true, 200, 'Category added Successfully', '', route('admin.category.list'));
                 } else {
                     return $this->responseJson(false, 200, 'Something went wrong!!', '', '');
                 }
@@ -58,13 +49,18 @@ class CouponController extends BaseController
                 return $this->responseJson(false, 200, 'Something went wrong!!', '', '');
             }
         }
-        $couponCode = generateCouponCode();
-        return view('admin.pages.coupon.add', compact('couponCode'));
+        return view('admin.pages.proxy.category.add');
     }
-    public function editCoupon()
+    public function listCategory()
     {
+        $data = $this->CategoryContract->allCategories();
+        return view('admin.pages.proxy.category.list', compact('data'));
     }
-    public function deleteCoupon()
+    public function editCategory()
+    {
+        return view('admin.pages.proxy.category.edit');
+    }
+    public function deleteCategory()
     {
     }
 }

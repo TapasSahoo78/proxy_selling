@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories\Services\Admin;
+namespace App\Repositories\Services\Admin\Proxy;
 
-use App\Repositories\Contracts\Admin\CouponContract;
+use App\Repositories\Contracts\Admin\Proxy\CouponContract;
 use App\Models\Coupon as SELF_MODEL;
 
 class CouponService implements CouponContract

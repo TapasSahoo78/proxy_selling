@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Proxy Raja</title>
+    <title>Free Template</title>
     <link rel="icon" href="images/icon.png')}}" type="image/gif" sizes="24x24">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Uhost is Creative Website Template" name="description">

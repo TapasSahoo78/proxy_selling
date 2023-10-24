@@ -16,10 +16,10 @@ class CustomerCheck
      */
     public function handle(Request $request, Closure $next): Response
     {
-        $isAuthenticated = Auth::check();
+        $isAuthenticated = Auth::guard('admin')->check();
+
         if (!$isAuthenticated) {
-            dd("Customer");
-            // return redirect()->route('admin.login')->with('checklogin', 'please need login first !');
+            return redirect()->route('admin.login')->with('checklogin', 'please need login first !');
         }
         return $next($request);
     }

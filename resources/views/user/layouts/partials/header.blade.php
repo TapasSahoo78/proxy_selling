@@ -45,8 +45,8 @@
                                 <ul>
                                     <li><a href="pricing-table.html">Term and Conditions</a></li>
                                     <li><a href="icons-etline.html">Privacy Policy</a></li>
-                                    <li><a href="icons-fontawesome.html">Cancelation & Refund Policy</a></li>
-                                    <li><a href="icons-etline.html">Shipping & Delivery Policy</a></li>
+                                    {{-- <li><a href="icons-fontawesome.html">Cancelation & Refund Policy</a></li>
+                                    <li><a href="icons-etline.html">Shipping & Delivery Policy</a></li> --}}
                                 </ul>
                             </li>
                             <li><a href="{{ route('faq') }}">FAQ</a></li>

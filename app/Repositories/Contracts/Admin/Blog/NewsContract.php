@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Repositories\Contracts\Admin;
+namespace App\Repositories\Contracts\Admin\Blog;
 
-interface CategoryContract
+interface NewsContract
 {
     public function allCategories();
     public function storeCategory(array $data);

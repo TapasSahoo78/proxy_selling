@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories\Contracts\Admin;
+namespace App\Repositories\Contracts\Admin\Cms;
 
 interface CmsContract
 {
