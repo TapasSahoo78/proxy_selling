@@ -3,34 +3,34 @@
 namespace App\Repositories\Services\Admin\Blog;
 
 use App\Repositories\Contracts\Admin\Blog\NewsContract;
-use App\Models\Category as SELF_MODEL;
+use App\Models\Blog as SELF_MODEL;
 
 class NewsService implements NewsContract
 {
 
-    public function allCategories()
+    public function allNews()
     {
-        return SELF_MODEL::latest()->paginate(10);
+        return SELF_MODEL::with('category', 'admin')->latest()->paginate(10);
     }
 
-    public function storeCategory($data)
+    public function storeNews($data)
     {
         return SELF_MODEL::insert($data);
     }
 
-    public function findCategory($id)
+    public function findNews($id)
     {
         return SELF_MODEL::find($id);
     }
 
-    public function updateCategory($data, $id)
+    public function updateNews($data, $id)
     {
         $clients = SELF_MODEL::where('id', $id)->first();
         $clients->name = $data['name'];
         $clients->save();
     }
 
-    public function destroyCategory($id)
+    public function destroyNews($id)
     {
         $clients = SELF_MODEL::find($id);
         $clients->delete();

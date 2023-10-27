@@ -4,9 +4,9 @@
     <!-- Page Heading -->
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Category</h1>
-            <a href="{{ route('admin.category.list') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-list fa-sm text-white-50"></i> Category List</a>
+            <h1 class="h3 mb-0 text-gray-800">Blog</h1>
+            <a href="{{ route('admin.news.list') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-list fa-sm text-white-50"></i> Blog List</a>
         </div>
     </div>
     <div class="container-fluid">
@@ -16,17 +16,21 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="p-4">
-                            <form role="form" id="adminFrm"
-                                data-action="{{ route('admin.category.store') }}" method="post"
+                            <form role="form" id="adminFrm" data-action="{{ route('admin.news.store') }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control form-control-user"
-                                        id="exampleInputEmail" placeholder="Enter Category Name">
+                                    <select name="blog_category_id" id="" class="form-control form-control-user">
+                                        {{ getBlogCategory('') }}
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="title" class="form-control form-control-user"
+                                        id="exampleInputEmail" placeholder="Enter Blog Title">
                                 </div>
                                 <div class="form-group">
                                     <textarea class="form-control form-control-user ckeditor" cols="80" rows="10" name="description"
-                                        placeholder="Enter Category Description"></textarea>
+                                        placeholder="Enter Blog Description"></textarea>
 
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button>

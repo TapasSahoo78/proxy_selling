@@ -3,7 +3,7 @@
 namespace App\Repositories\Services\Admin\Blog;
 
 use App\Repositories\Contracts\Admin\Blog\BlogCategoryContract;
-use App\Models\Category as SELF_MODEL;
+use App\Models\BlogCategory as SELF_MODEL;
 
 class BlogCategoryService implements BlogCategoryContract
 {

@@ -4,9 +4,9 @@
     <!-- Page Heading -->
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-3">
-            <h1 class="h3 mb-0 text-gray-800">Category</h1>
-            <a href="{{ route('admin.category.store') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                    class="fas fa-save fa-sm text-white-50"></i> New Category</a>
+            <h1 class="h3 mb-0 text-gray-800">Blog</h1>
+            <a href="{{ route('admin.news.store') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-save fa-sm text-white-50"></i> New Blog</a>
         </div>
     </div>
     <!-- Content Row -->
@@ -22,8 +22,10 @@
                             <thead>
                                 <tr>
                                     <th>SL No</th>
-                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Title</th>
                                     <th>Description</th>
+                                    <th>Created By</th>
                                     <th>Status</th>
                                     <th>Action</th>
                                 </tr>
@@ -32,12 +34,14 @@
                                 @foreach ($data as $key => $value)
                                     <tr>
                                         <td>{{ ++$key }}</td>
-                                        <td>{{ $value->name }}</td>
-                                        <td>{!! $value->description !!}</td>
+                                        <td>{{ $value->category->name }}</td>
+                                        <td>{{ $value->title }}</td>
+                                        <td>{!! Str::limit($value->description, 60, '...') !!}</td>
+                                        <td>{{ $value->admin->name }}</td>
                                         <td>
                                             <button class="btn btn-success change-status">Active</button>
                                         </td>
-                                        <td>
+                                        <td style="width: 20%;">
                                             <button class="btn btn-primary">Edit</button>
                                             <button class="btn btn-danger">Delete</button>
                                         </td>

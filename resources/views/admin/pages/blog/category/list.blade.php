@@ -4,8 +4,8 @@
     <!-- Page Heading -->
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-3">
-            <h1 class="h3 mb-0 text-gray-800">Category</h1>
-            <a href="{{ route('admin.category.store') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            <h1 class="h3 mb-0 text-gray-800">Blog Category</h1>
+            <a href="{{ route('admin.blog.category.store') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                     class="fas fa-save fa-sm text-white-50"></i> New Category</a>
         </div>
     </div>

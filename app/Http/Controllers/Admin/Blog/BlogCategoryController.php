@@ -39,7 +39,7 @@ class BlogCategoryController extends BaseController
 
                 DB::commit();
                 if (isset($result) && !empty($result)) {
-                    return $this->responseJson(true, 200, 'Category added Successfully', '', route('admin.category.list'));
+                    return $this->responseJson(true, 200, 'Blog Category added Successfully', '', route('admin.blog.category.list'));
                 } else {
                     return $this->responseJson(false, 200, 'Something went wrong!!', '', '');
                 }
@@ -49,16 +49,16 @@ class BlogCategoryController extends BaseController
                 return $this->responseJson(false, 200, 'Something went wrong!!', '', '');
             }
         }
-        return view('admin.pages.proxy.category.add');
+        return view('admin.pages.blog.category.add');
     }
     public function listCategory()
     {
         $data = $this->BlogCategoryContract->allCategories();
-        return view('admin.pages.proxy.category.list', compact('data'));
+        return view('admin.pages.blog.category.list', compact('data'));
     }
     public function editCategory()
     {
-        return view('admin.pages.proxy.category.edit');
+        return view('admin.pages.blog.category.edit');
     }
     public function deleteCategory()
     {

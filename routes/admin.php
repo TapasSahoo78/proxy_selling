@@ -5,7 +5,10 @@ use App\Http\Controllers\Admin\{
     NotificationController,
     TicketController
 };
-use App\Http\Controllers\Admin\Blog\BlogCategoryController;
+use App\Http\Controllers\Admin\Blog\{
+    BlogCategoryController,
+    NewsController
+};
 use App\Http\Controllers\Admin\Cms\CmsController;
 use App\Http\Controllers\Admin\Proxy\CategoryController;
 use App\Http\Controllers\Admin\Proxy\CouponController;
@@ -52,12 +55,12 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.'], function () {
                 Route::get('/delete/{id}',  'deleteCategory')->name('delete');
             });
         });
-        Route::controller(ProxyController::class)->group(function () {
-            Route::group(['prefix' => 'proxy', 'as' => 'proxy.'], function () {
-                Route::match(['get', 'post'], 'add', 'storeProxy')->name('store');
-                Route::get('list', 'listProxy')->name('list');
-                Route::match(['GET', 'POST'], '/edit/{id}', 'editProxy')->name('edit');
-                Route::get('/delete/{id}',  'deleteProxy')->name('delete');
+        Route::controller(NewsController::class)->group(function () {
+            Route::group(['prefix' => 'news', 'as' => 'news.'], function () {
+                Route::match(['get', 'post'], 'add', 'storeNews')->name('store');
+                Route::get('list', 'listNews')->name('list');
+                Route::match(['GET', 'POST'], '/edit/{id}', 'editNews')->name('edit');
+                Route::get('/delete/{id}',  'deleteNews')->name('delete');
             });
         });
         /************************ Blog Management Start ******************************/

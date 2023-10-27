@@ -4,8 +4,8 @@
     <!-- Page Heading -->
     <div class="container-fluid">
         <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Category</h1>
-            <a href="{{ route('admin.category.list') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+            <h1 class="h3 mb-0 text-gray-800">Blog Category</h1>
+            <a href="{{ route('admin.blog.category.list') }}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                     class="fas fa-list fa-sm text-white-50"></i> Category List</a>
         </div>
     </div>
@@ -17,7 +17,7 @@
                     <div class="col-lg-12">
                         <div class="p-4">
                             <form role="form" id="adminFrm"
-                                data-action="{{ route('admin.category.store') }}" method="post"
+                                data-action="{{ route('admin.blog.category.store') }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group">

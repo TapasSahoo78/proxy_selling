@@ -37,7 +37,7 @@
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Utilities:</h6>
                 <a class="collapse-item" href="{{ route('admin.blog.category.list') }}">Categories</a>
-                <a class="collapse-item" href="{{ route('admin.user.list') }}">Blogs</a>
+                <a class="collapse-item" href="{{ route('admin.news.list') }}">Blogs</a>
             </div>
         </div>
     </li>
