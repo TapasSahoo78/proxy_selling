@@ -6,34 +6,14 @@
                 <div class="row">
                     <div class="col-md-4 col-xs-4">
                         <div class="widget">
-                            <h5>Hosting</h5>
-                            <div class="tiny-border"></div>
-                            <ul>
-                                <li><a href="#">Web Hosting</a></li>
-                                <li><a href="#">VPS Hosting</a></li>
-                                <li><a href="#">Cloud Hosting</a></li>
-                                <li><a href="#">WordPress Hosting</a></li>
-                                <li><a href="#">Email Hosting</a></li>
-                                <li><a href="#">CMS Hosting</a></li>
-                                <li><a href="#">Ecommerce Hosting</a></li>
-                                <li><a href="#">Website Builder</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-xs-4">
-                        <div class="widget">
                             <h5>Domains</h5>
                             <div class="tiny-border"></div>
                             <ul>
-                                <li><a href="#">Domain Checker</a></li>
-                                <li><a href="#">Domain Transfer</a></li>
-                                <li><a href="#">Free Domain</a></li>
-                                <li><a href="#">XYZ Domain</a></li>
-                                <li><a href="#">Cheap SSL Certificate</a></li>
-                                <li><a href="#">Buy Domain Name</a></li>
-                                <li><a href="#">Whois Checker</a></li>
-                                <li><a href="#">Free SSL Certificate</a></li>
+                                <li><a href="{{route('proxies')}}">Proxies</a></li>
+                                <li><a href="{{route('blog')}}">Blog</a></li>
+                                <li><a href="{{route('proxy.checker')}}">Proxy Checker</a></li>
+
+                                <li><a href="#">Cart</a></li>
                             </ul>
                         </div>
                     </div>
@@ -43,14 +23,12 @@
                             <h5>Company</h5>
                             <div class="tiny-border"></div>
                             <ul>
-                                <li><a href="#">About</a></li>
-                                <li><a href="#">Affiliates</a></li>
-                                <li><a href="#">Blog</a></li>
-                                <li><a href="#">Careers</a></li>
-                                <li><a href="#">Community</a></li>
-                                <li><a href="#">News</a></li>
-                                <li><a href="#">Partners</a></li>
-                                <li><a href="#">Press Releases</a></li>
+                                <li><a href="{{route('privacy.policy')}}">Privacy Policy</a></li>
+                                <li><a href="{{route('term.condition')}}">Term & Conditions</a></li>
+
+                                <li><a href="{{route('faq')}}">Faq</a></li>
+                                <li><a href="{{route('contact_us')}}">Contact Us</a></li>
+
                             </ul>
                         </div>
                     </div>

@@ -40,15 +40,7 @@
                             </li>
                             <li><a href="{{ route('proxies') }}">Proxies</a></li>
                             <li><a href="{{ route('blog') }}">Blog</a></li>
-                            <li><a href="#">Proxy Checker</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul>
-                                    <li><a href="pricing-table.html">Term and Conditions</a></li>
-                                    <li><a href="icons-etline.html">Privacy Policy</a></li>
-                                    {{-- <li><a href="icons-fontawesome.html">Cancelation & Refund Policy</a></li>
-                                    <li><a href="icons-etline.html">Shipping & Delivery Policy</a></li> --}}
-                                </ul>
-                            </li>
+                            <li><a href="{{route('proxy.checker')}}">Proxy Checker</a></li>
                             <li><a href="{{ route('faq') }}">FAQ</a></li>
                             <li><a href="{{ route('contact_us') }}">Contact</a></li>
                         </ul>

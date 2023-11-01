@@ -27,7 +27,7 @@ Route::get('/contact-us', function () {
 })->name('contact_us');
 
 Route::get('/proxies', function () {
-    return view('user.pages.services.proxies');
+    return view('user.pages.services.proxy.proxies');
 })->name('proxies');
 
 Route::get('/blog', function () {
@@ -41,3 +41,15 @@ Route::get('/news-single', function () {
 Route::get('/faq', function () {
     return view('user.pages.include.faq');
 })->name('faq');
+
+Route::get('/term-condition', function () {
+    return view('user.pages.include.term_condition');
+})->name('term.condition');
+
+Route::get('/privacy-policy', function () {
+    return view('user.pages.include.privacy_policy');
+})->name('privacy.policy');
+
+Route::get('/proxy-checker', function () {
+    return view('user.pages.services.proxy.proxy_checker');
+})->name('proxy.checker');

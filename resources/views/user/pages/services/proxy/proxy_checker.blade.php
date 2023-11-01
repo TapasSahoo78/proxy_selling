@@ -1,5 +1,5 @@
 @extends('user.layouts.app')
-@section('title', 'Faq Page')
+@section('title', 'Proxy checker')
 @section('content')
     <div id="top"></div>
     <!-- revolution slider begin -->
@@ -18,13 +18,20 @@
 
                                 <div class="spacer-single"></div>
 
-                                <div class="col text-center">
-                                    It has survived not only five centuries, but also the leap into electronic typesetting,
-                                    remaining essentially unchanged. It was popularised in the 1960s with the release of
-                                    Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                                    publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                </div>
+                                {{-- <form action='blank.php' class="row" id='form_sb' method="post" name="myForm">
+                                    <div class="col text-center">
+                                        <div class="spacer-10"></div>
+                                        <input class="form-control" id='name_1' name='name_1'
+                                            placeholder="type your question here" type='text'> <a
+                                            href="search-results.html" id="btn-submit"><i class="arrow_right"></i></a>
+                                    </div>
+                                </form> --}}
+
+                                <div class="spacer-20"></div>
+
+                                <p>eg. register domain, create email.</p>
                             </div>
+                            <div class="clearfix"></div>
                         </div>
                     </div>
                 </div>

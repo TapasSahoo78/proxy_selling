@@ -1,5 +1,5 @@
 @extends('user.layouts.app')
-@section('title', 'Faq Page')
+@section('title', 'Privacy Policy')
 @section('content')
     <div id="top"></div>
     <!-- revolution slider begin -->
@@ -14,7 +14,7 @@
                         <div class="col-md-8 offset-md-2">
                             <div class="col text-center">
                                 <div class="spacer-single"></div>
-                                <h1>FAQ</h1>
+                                <h1>Privacy Policy</h1>
 
                                 <div class="spacer-single"></div>
 

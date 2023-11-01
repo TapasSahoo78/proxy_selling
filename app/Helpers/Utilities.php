@@ -91,3 +91,35 @@ if (!function_exists('getCategory')) {
         }
     }
 }
+
+if (!function_exists('getNavbar')) {
+    function getNavbar($navbar)
+    {
+        $data = ["proxies", "blog", "proxy-checker", "faq", "contact-us", "privacy-policy", "term-condition"];
+        echo "<option value='' selected>Select Page</option>";
+
+        foreach ($data as $key => $value) {
+            if ($navbar == $value) {
+                echo "<option value='" . $value . "' selected>" . $value . "</option>";
+            } else {
+                echo "<option value='" . $value . "'>" . $value . "</option>";
+            }
+        }
+    }
+}
+
+if (!function_exists('getNavContent')) {
+    function getNavContent($navbar)
+    {
+        $data = ["home", "faq", "contact-us", "privacy-policy", "term-condition"];
+        echo "<option value='' selected>Select Page</option>";
+
+        foreach ($data as $key => $value) {
+            if ($navbar == $value) {
+                echo "<option value='" . $value . "' selected>" . $value . "</option>";
+            } else {
+                echo "<option value='" . $value . "'>" . $value . "</option>";
+            }
+        }
+    }
+}
