@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\Blog\{
 };
 use App\Http\Controllers\Admin\Cms\CmsController;
 use App\Http\Controllers\Admin\Proxy\CategoryController;
+use App\Http\Controllers\Admin\Proxy\CountryController;
 use App\Http\Controllers\Admin\Proxy\CouponController;
 use App\Http\Controllers\Admin\Proxy\ProxyController;
 use App\Http\Controllers\Admin\User\UserController;
@@ -35,6 +36,16 @@ Route::group(['namespace' => 'Admin', 'as' => 'admin.'], function () {
         Route::get('dashboard', function () {
             return view('admin.pages.dashboard');
         })->name('dashboard');
+
+        /************************ Settings Management Start ******************************/
+        Route::controller(CountryController::class)->group(function () {
+            Route::group(['prefix' => 'country', 'as' => 'country.'], function () {
+                Route::match(['get', 'post'], 'add', 'storeCountry')->name('store');
+                Route::get('list', 'listCountry')->name('list');
+                Route::match(['GET', 'POST'], '/edit/{id}', 'editCountry')->name('edit');
+            });
+        });
+        /************************ Settings Management Start ******************************/
 
         /************************ Settings Management Start ******************************/
         Route::controller(PaymentTypeController::class)->group(function () {
