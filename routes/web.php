@@ -49,7 +49,3 @@ Route::get('/term-condition', function () {
 Route::get('/privacy-policy', function () {
     return view('user.pages.include.privacy_policy');
 })->name('privacy.policy');
-
-Route::get('/proxy-checker', function () {
-    return view('user.pages.services.proxy.proxy_checker');
-})->name('proxy.checker');

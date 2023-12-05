@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Log;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Http;
 use Intervention\Image\Facades\Image;
 
 if (!function_exists('onProduction')) {
@@ -77,5 +78,24 @@ if (!function_exists('generateCouponCode')) {
         }
 
         return $couponCode;
+    }
+}
+
+if (!function_exists('getNetworkIpAddress')) {
+    function getNetworkIpAddress()
+    {
+        // Make a request to an external service that echoes the public IP address
+        $response = Http::get('https://api64.ipify.org?format=json');
+
+        // Check if the request was successful
+        if ($response->successful()) {
+            // Get the public IP address from the response
+            $networkIp = $response->json('ip');
+
+            return $networkIp;
+        }
+
+        // Handle the case when the API request fails
+        return 'Unable to fetch network IP address';
     }
 }

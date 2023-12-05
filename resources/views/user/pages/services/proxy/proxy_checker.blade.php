@@ -41,10 +41,9 @@
     </section>
     <!-- section close -->
 
-
     <section id="section-features">
         <div class="container">
-            <div class="row>
+            <div class="row">
                 <div class="col-md-6 mb30">
                 <div class="box-highlight">
                     <div class="heading text-center text-white">

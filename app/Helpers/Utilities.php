@@ -2,6 +2,7 @@
 
 use App\Models\BlogCategory;
 use App\Models\Category;
+use Illuminate\Support\Facades\Http;
 
 if (!function_exists('getCountry')) {
     function getCountry($country_id)
@@ -123,3 +124,4 @@ if (!function_exists('getNavContent')) {
         }
     }
 }
+

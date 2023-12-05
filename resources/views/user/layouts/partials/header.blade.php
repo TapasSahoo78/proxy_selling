@@ -40,7 +40,7 @@
                             </li>
                             <li><a href="{{ route('proxies') }}">Proxies</a></li>
                             <li><a href="{{ route('blog') }}">Blog</a></li>
-                            <li><a href="{{route('proxy.checker')}}">Proxy Checker</a></li>
+                            <li><a href="{{route('user.ip.information')}}">Proxy Checker</a></li>
                             <li><a href="{{ route('faq') }}">FAQ</a></li>
                             <li><a href="{{ route('contact_us') }}">Contact</a></li>
                         </ul>
